@@ -60,3 +60,13 @@ let palavrasComTamanhosCom5 = palavras.filter((item)=>{
 console.log(numerosPares);
 
 console.log(palavrasComTamanhosCom5)
+
+
+let produtos = ["pc", "máquina de lavar", "mesa", "notebook", "celular"];
+
+
+let achar_produto = produtos.find( produto =>{
+    return produto === "notebook";
+});
+
+console.log("Produto achado: " + achar_produto)
