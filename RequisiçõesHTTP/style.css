@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    text-align: center;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+}
+
+h1{
+    margin-bottom: 10px;
+    position: relative;
+    left: 15px;
+}
