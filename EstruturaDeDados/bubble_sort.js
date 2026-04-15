@@ -76,3 +76,40 @@ function bubbleSortEx3(elementos){
 }
 
 console.log(bubbleSortEx3(array_ex3))
+
+
+
+/*
+
+Organizar preços de produtos
+
+Você tem uma lista de preços em uma loja:
+
+let precos = [50, 30, 70, 20, 40];
+
+E quer ordenar do menor para o maior.
+Você compara de dois em dois:
+
+Se o da esquerda for maior → troca
+
+Se não → segue o baile
+
+*/
+
+let precos = [50, 30, 70, 20, 40];
+
+function bubbleSortDoExemplo(elementos){
+    for(let i = elementos.length - 1; i > 0; i--){
+        for(let j = 0; j < i; j++){
+            if(elementos[j] > elementos[j + 1]){
+                let temp = elementos[j + 1]
+                elementos[j + 1] = elementos[j]
+                elementos[j] = temp
+            }
+        }
+    }
+
+    return elementos
+}
+
+console.log(bubbleSortDoExemplo(precos))

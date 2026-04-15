@@ -39,11 +39,11 @@ let array_ex1 = [8, 2, 5, 3]
 
 function insertionSortEx1(elementos){
     for(let i = 1; i < elementos.length; i++){
-        key = elementos[i] // segunda iteração: key = 5
-        j = i - 1 // 1
+        let key = elementos[i] // segunda iteração: key = 5
+        let j = i - 1 // 1
 
 
-        while(j <= 0 && elementos[j] > key){ // segunda iteração: elementos[j] = 8 
+        while(j >= 0 && elementos[j] > key){ // segunda iteração: elementos[j] = 8 
             elementos[j + 1] = elementos[j]  
             j--; 
         }
@@ -125,3 +125,61 @@ function insertionSortErrado(array){
 
     return array;
 }
+
+
+
+/*
+
+Problema: Organizando pedidos de um pequeno e-commerce
+
+Você está trabalhando em um sistema de um pequeno e-commerce local. Durante o dia, os pedidos vão sendo registrados em uma lista conforme chegam, sem nenhuma ordem específica.
+
+Cada pedido tem um valor total em reais, e no final do dia o dono quer visualizar os pedidos ordenados do menor para o maior valor, para analisar padrões de compra.
+
+Mas há um detalhe importante:
+Os pedidos chegam quase ordenados, porque clientes costumam comprar valores parecidos.
+
+Sua missão é:
+
+Dada a lista de valores dos pedidos:
+[120, 150, 130, 160, 155]
+
+Utilize o Insertion Sort para ordenar essa lista em ordem crescente.
+
+Durante a execução, responda:
+
+Quantas vezes um elemento precisou ser “deslocado”?
+
+Em qual momento o algoritmo mais trabalhou?
+
+Pergunta extra (nível entrevista)
+Por que o Insertion Sort é uma boa escolha nesse cenário específico de pedidos?
+
+*/
+
+// um elemento precisou ser deslocado apenas 1 vez 
+
+// na posição 2 e na posição 4
+
+// O insertion sort é execelente pois a lista estar quase organizada e é pequena
+
+let listaDoExemplo = [120, 150, 130, 160, 155]
+
+function insertionSortDoExemplo(elementos){
+    for(let i = 1; i < elementos.length; i++){
+        let key = elementos[i];
+        let j = i - 1;
+    
+        while(j >= 0 && elementos[j] > key){
+            elementos[j + 1] = elementos[j]
+            j--
+        }
+
+        elementos[j + 1] = key
+    
+    }
+
+    return elementos;
+}
+
+console.log(insertionSortDoExemplo(listaDoExemplo))
