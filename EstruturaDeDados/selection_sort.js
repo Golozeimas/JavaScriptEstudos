@@ -173,3 +173,5 @@ function selectionSortExemplo3(arr){
     
     }
 }
+
+
